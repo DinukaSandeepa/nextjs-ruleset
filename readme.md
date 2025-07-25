@@ -33,33 +33,33 @@ The folder structure is designed to be modular, scalable, and aligned with Next.
 │   │   └── /products
 │   │       └── route.js               # API route for product-related operations
 │   ├── /dashboard
-│   │   ├── page.js                    # Dashboard page
-│   │   ├── layout.js                  # Dashboard-specific layout
+│   │   ├── page.jsx                    # Dashboard page
+│   │   ├── layout.jsx                  # Dashboard-specific layout
 │   │   └── /components                # Page-specific components
 │   ├── /auth
 │   │   ├── /login
-│   │   │   └── page.js                # Login page
+│   │   │   └── page.jsx                # Login page
 │   │   └── /register
-│   │       └── page.js                # Register page
-│   ├── page.js                        # Root page (e.g., homepage)
-│   ├── layout.js                      # Root layout
+│   │       └── page.jsx                # Register page
+│   ├── page.jsx                       # Root page (e.g., homepage)
+│   ├── layout.jsx                      # Root layout
 │   └── globals.css                    # Global styles (Tailwind + shadcn/ui)
 ├── /components
 │   ├── /ui                            # shadcn/ui components
-│   │   ├── button.js                  # Reusable Button component
-│   │   ├── input.js                   # Reusable Input component
+│   │   ├── button.jsx                  # Reusable Button component
+│   │   ├── input.jsx                   # Reusable Input component
 │   │   └── ...                        # Other shadcn/ui components
 │   ├── /common                        # Reusable, non-page-specific components
-│   │   ├── header.js                  # Header component
-│   │   ├── footer.js                  # Footer component
-│   │   └── navbar.js                  # Navigation bar
+│   │   ├── header.jsx                  # Header component
+│   │   ├── footer.jsx                  # Footer component
+│   │   └── navbar.jsx                  # Navigation bar
 │   └── /feature                       # Feature-specific components
 │       ├── /user
-│       │   ├── user-profile.js        # User profile component
-│       │   └── user-list.js           # User list component
+│       │   ├── user-profile.jsx        # User profile component
+│       │   └── user-list.jsx           # User list component
 │       └── /product
-│           ├── product-card.js        # Product card component
-│           └── product-form.js        # Product form component
+│           ├── product-card.jsx        # Product card component
+│           └── product-form.jsx        # Product form component
 ├── /lib
 │   ├── /db
 │   │   └── mongoose.js                # MongoDB connection setup
@@ -175,7 +175,6 @@ Consistent naming improves readability and collaboration. Follow these rules:
   - Use Playwright or Cypress for end-to-end tests.
 - **Documentation**:
   - Maintain a `README.md` with setup instructions, folder structure, and key commands.
-  - Document complex components and utilities with JSDoc.
 - **Error Handling**:
   - Implement global error boundaries in layouts (`/app/layout.js`).
   - Handle MongoDB connection errors gracefully in `/lib/db/mongoose.js`.
@@ -242,7 +241,7 @@ export function UserProfile({ userData }) {
 
 - **Component Bloat**: If components exceed 200 lines, refactor into smaller components or move logic to hooks.
 - **Folder Disorganization**: Stick to the defined structure and avoid placing components in incorrect folders (e.g., page-specific components outside /app).
-- **Naming Inconsistencies**: Enforce kebab-case for files and PascalCase for components via ESLint rules.
+- **Naming Inconsistencies**: Enforce kebab-case for files and PascalCase for components via [ESLint rules](https://eslint.org/docs/latest/rules/).
 - **Scalability Issues**: Use Server Components, dynamic imports, and MongoDB indexes to improve performance as the project grows.
 
 ## 10. Getting Started
@@ -254,7 +253,7 @@ To set up the project:
 3. Set up Tailwind and shadcn/ui: Follow shadcn/ui documentation for initialization.
 4. Configure MongoDB connection in /lib/db/mongoose.js.
 5. Create the folder structure as outlined above.
-6. Set up ESLint, Prettier, and Husky for code quality.
+6. Set up ESLint and Prettier for code quality.
 7. Document the setup in README.md.
 
 This ruleset and structure will help your team maintain a clean, scalable, and collaborative Next.js project. Adjust as needed based on project requirements, but maintain consistency across the team.
