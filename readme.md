@@ -248,8 +248,8 @@ export function UserProfile({ userData }) {
 
 To set up the project:
 
-1. Initialize a Next.js project: npx create-next-app@latest my-app --javascript --eslint.
-2. Install dependencies: npm install mongoose shadcn-ui tailwindcss next-auth.
+1. Initialize a [Next.js](https://nextjs.org/) project: npx create-next-app@latest my-app --javascript --eslint.
+2. Install dependencies: npm install mongoose [shadcn-ui](https://ui.shadcn.com/) tailwindcss [next-auth] (https://next-auth.js.org/).
 3. Set up Tailwind and shadcn/ui: Follow shadcn/ui documentation for initialization.
 4. Configure MongoDB connection in /lib/db/mongoose.js.
 5. Create the folder structure as outlined above.
