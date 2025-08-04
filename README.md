@@ -35,7 +35,7 @@ The folder structure is designed to be modular, scalable, and aligned with Next.
 │   ├── /dashboard
 │   │   ├── page.jsx                    # Dashboard page
 │   │   ├── layout.jsx                  # Dashboard-specific layout
-│   │   └── /components                # Page-specific components
+│   │   └── /_components                # Page-specific components
 │   ├── /auth
 │   │   ├── /login
 │   │   │   └── page.jsx                # Login page
