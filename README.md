@@ -2,6 +2,9 @@
 
 This document outlines the ruleset and folder structure for a Next.js project using MongoDB, JavaScript, and shadcn/ui. The guidelines aim to ensure scalability, maintainability, and consistency across the team, addressing issues like component bloat, disorganized structure, and naming inconsistencies.
 
+> **🚀 Quick Start**: Use our official starter template: `npx create-next-shadcn-mongo my-app`  
+> This template implements all the rules and structure outlined in this document.
+
 ## 1. Project Setup Rules
 
 - **Next.js Version**: Use the latest stable version of Next.js (e.g., 15.x or higher) with the App Router for better scalability and performance.
@@ -246,14 +249,43 @@ export function UserProfile({ userData }) {
 
 ## 10. Getting Started
 
-To set up the project:
+### Quick Start (Recommended)
 
-1. Initialize a [Next.js](https://nextjs.org/) project: npx create-next-app@latest my-app --javascript --eslint.
-2. Install dependencies: npm install mongoose [shadcn-ui](https://ui.shadcn.com/) tailwindcss [next-auth](https://next-auth.js.org/).
-3. Set up Tailwind and shadcn/ui: Follow shadcn/ui documentation for initialization.
-4. Configure MongoDB connection in /lib/db/mongoose.js.
-5. Create the folder structure as outlined above.
-6. Set up ESLint and Prettier for code quality.
-7. Document the setup in README.md.
+The fastest way to start a project following this ruleset is to use the official starter template:
+
+```bash
+npx create-next-shadcn-mongo my-app
+cd my-app
+npm run dev
+```
+
+This command creates a complete Next.js project with:
+- ✅ Next.js 15 with App Router
+- ✅ 45+ ShadCN UI components pre-installed
+- ✅ MongoDB integration with Mongoose
+- ✅ Authentication foundation
+- ✅ Tailwind CSS configuration
+- ✅ ESLint and Prettier setup
+- ✅ Folder structure following this ruleset
+- ✅ Environment variables template
+
+### Manual Setup (Alternative)
+
+If you prefer to set up manually:
+
+1. Initialize a [Next.js](https://nextjs.org/) project: `npx create-next-app@latest my-app --javascript --eslint`
+2. Install dependencies: `npm install mongoose shadcn-ui tailwindcss next-auth`
+3. Set up Tailwind and shadcn/ui: Follow [shadcn/ui documentation](https://ui.shadcn.com/) for initialization
+4. Configure MongoDB connection in `/lib/db/mongoose.js`
+5. Create the folder structure as outlined above
+6. Set up ESLint and Prettier for code quality
+7. Document the setup in README.md
+
+### After Setup
+
+Regardless of your chosen method:
+1. Copy `.env.example` to `.env.local` and configure your environment variables
+2. Follow the naming conventions and component rules outlined in this document
+3. Maintain the folder structure as your project scales
 
 This ruleset and structure will help your team maintain a clean, scalable, and collaborative Next.js project. Adjust as needed based on project requirements, but maintain consistency across the team.
